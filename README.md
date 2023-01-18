@@ -10,7 +10,7 @@
 
 
 
-This is Hexo theme named Personal
+This is Hexo theme named Bloggy
 
 ## Getting started
 
@@ -18,7 +18,7 @@ Install dependencies:
 
 ``` bash
 $ git clone https://github.com/airraya/bloggy.git
-$ cd personaltheme
+$ cd bloggy
 $ npm install
 ```
 
