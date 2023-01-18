@@ -1,0 +1,9 @@
+
+<p class="post-meta">
+<span class="name">By <%- post.author || config.author %></span>
+</p>
+<p class="<%= class_name %>">
+  <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">On <%= date(post.date, date_format) %></time>
+</p>
+
+

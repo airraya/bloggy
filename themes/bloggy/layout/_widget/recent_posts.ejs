@@ -1,0 +1,17 @@
+<div class="sidebar">
+<% if (site.posts.length){ %>
+  <div class="widget-wrap">
+    <h4 class="lead"><%= __('recent_posts') %></h4>
+    <div class="widget">
+      <ul class="recentpost">
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li class="recentpost">
+            <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+          </li>
+		  <span class="recentdate"><%= date(post.date, 'MMMM D, YYYY') %></span>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+<% } %>
+</div>

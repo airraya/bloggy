@@ -1,0 +1,10 @@
+<div class="sidebar">
+<% if (site.tags.length){ %>
+  <div class="widget-wrap">
+    <h4 class="lead"><%= __('tags') %></h4>
+    <div class="widget">
+      <%- list_tags({show_count: theme.show_count}) %>
+    </div>
+  </div>
+<% } %>
+</div>

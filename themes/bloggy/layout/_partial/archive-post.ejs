@@ -1,0 +1,29 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+	<div class="article-inner-front-category">
+
+		<% if (post.link || post.title){ %>
+		  <div class="article-header-category">
+			<%- partial('post/title-category', {class_name: 'article-title'}) %>
+			Posted on <%- partial('post/datefront', {class_name: 'published-article-date', date_format: null}) %> <i class="fa fa-user"></i> by <%- post.author || config.author %></span>
+		  </div>
+		<% } %>
+		
+		<div class="article-entry-category" itemprop="articleBody">
+		  <% if (post.excerpt && index){ %>
+			<%- post.excerpt %>
+			<% if (theme.excerpt_link){ %>
+			  <p class="article-more-link">
+				<div class="btn btn-default">
+					<a class="btn-links" href="<%- url_for(post.path) %>"><%= theme.excerpt_link %> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				</div>
+			  </p>
+			<% } %>
+		  <% } else { %>
+			<%- post.content %>
+		  <% } %>
+		</div>
+	</div>
+	  <% if (!index){ %>
+		<%- partial('post/nav') %>
+	  <% } %>
+</article>

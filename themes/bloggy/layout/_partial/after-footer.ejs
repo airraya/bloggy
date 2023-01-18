@@ -1,0 +1,140 @@
+
+<!-- footer -->
+      <footer>
+         <div id="footer-wrapper" class="footer-wrapper">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="footer-title">
+                        <h2 class="footer-title">About Best Recipes</h2>
+						<p class="footer-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus nunc quis metus facilisis, vitae ullamcorper lacus aliquet. Curabitur sed quam ac ipsum cursus pretium. Vivamus bibendum, nunc ac lobortis dictum, mi velit venenatis elit, at bibendum nulla libero vitae velit. Vivamus lacinia non odio et laoreet. Aliquam blandit imperdiet tristique. Ut ut dictum lacus, non venenatis est. Nulla condimentum ut massa at condimentum. Nulla dui turpis, lobortis ut massa sed, posuere consequat odio. Curabitur luctus ac nisi et interdum. Quisque elementum porttitor egestas.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                     <div class="category">
+                        <a href="#"><p>About us</p></a>
+                           <a href="#"><p>Contact us</p></a>
+                           <a href="#"><p>Privacy</p></a>
+                           <a href="#"><p>Terms of Use</p></a>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30 mb-xs-0">
+                     <div class="category">
+                        <!-- Contacts Widget -->
+
+                        <div class="links">
+                           <a href="#"><p>Appetizers</p></a>
+                           <a href="#"><p>Drinks</p></a>
+                           <a href="#"><p>Breakfast</p></a>
+                           <a href="#"><p>Lunch</p></a>
+                        </div>
+                        <!-- / Contacts Widget -->
+                     </div>
+                  </div>
+                  <div class="col-md-2 col-sm-6 col-xs-12">
+                     <div class="category">
+                        <div class="links">
+                           <a href="#"><p>Desserts</p></a>
+                           <a href="#"><p>Dinner</p></a>
+                           <a href="#"><p>Side Dishes</p></a>
+                           <a href="#"><p>Salads</p></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="category">
+							<div class="links">
+							   <a href="#"><p>Soups</p></a>
+							   <a href="#"><p>Snacks</p></a>
+							   <a href="#"><p>Cookies</p></a>
+							   <a href="#"><p>Cakes</p></a>
+							</div>
+						</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="black">Copyright &copy; Personal 2017</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="black">Made by <a href="http://www.iblogger.ca" target="_blank">iBlogger</a> with <i class="fa fa-heart" style="color:#DF0101;"></i> In Toronto, Canada. </p>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </footer>
+      <!-- /footer -->
+
+
+
+</script>
+
+    <!-- jQuery -->
+	<%- js('javascript/jquery.js') %>
+
+    <!-- Bootstrap Core JavaScript -->
+	<%- js('javascript/bootstrap.min.js') %>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	
+	<!-- Scroll to Top Button -->
+	<button href="#top" id="backToTopBtn" class="btn btn-md scroll"><span class="glyphicon glyphicon-chevron-up"></span></button>
+	  <script>
+	  $('#backToTopBtn').click(function(){
+			$('html,body').animate({scrollTop:0},'slow');return false;
+		});
+   </script>
+      <script>
+   $(document).ready(function(){
+	
+	//Check to see if the window is top if not then display button
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scroll').fadeIn();
+		} else {
+			$('.scroll').fadeOut();
+		}
+	});
+	
+	//Click event to scroll to top
+	$('.scroll').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	
+});
+   </script>
+
+
+
+
+<% if (config.disqus_shortname){ %>
+<script>
+  var disqus_shortname = '<%= config.disqus_shortname %>';
+  <% if (page.permalink){ %>
+  var disqus_url = '<%= page.permalink %>';
+  <% } %>
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<% } %>
+
+<% if (theme.fancybox){ %>
+  <%- css('fancybox/jquery.fancybox') %>
+  <%- js('fancybox/jquery.fancybox.pack') %>
+<% } %>
+
+<%- js('js/script') %>

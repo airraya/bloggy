@@ -1,0 +1,11 @@
+    
+    <% if (post.link || post.title){ %>
+      <div class="text-center">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </div>
+    <% } %>
+	<div class="text-center">
+		<%- partial('post/gallery') %>
+	</div>
+
+

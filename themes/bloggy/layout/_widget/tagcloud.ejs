@@ -1,0 +1,10 @@
+<div class="sidebar">
+<% if (site.tags.length){ %>
+  <div class="widget-wrap">
+    <h4 class="lead"><%= __('tagcloud') %></h4>
+    <div class="widget tagcloud">
+      <%- tagcloud() %>
+    </div>
+  </div>
+<% } %>
+</div>

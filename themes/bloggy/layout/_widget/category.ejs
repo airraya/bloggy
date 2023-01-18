@@ -1,0 +1,11 @@
+<div class="sidebar">
+<% if (site.categories.length){ %>
+  <div class="widget-wrap">
+    <h4 class="lead"><%= __('categories') %></h4>
+    <div class="widget">
+      <%- list_categories({show_count: theme.show_count}) %>
+    </div>
+  </div>
+<% } %>
+</div>
+
