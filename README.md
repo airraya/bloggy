@@ -1,4 +1,4 @@
-# Hexo Theme - Personal
+# Hexo Theme - Bloggy
 <!-- Markdown snippet -->
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/702692bd-2803-49a6-b239-b66ece884f1b/deploy-status)](https://app.netlify.com/sites/hexobloggy/deploys)
