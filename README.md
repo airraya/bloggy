@@ -1,24 +1,25 @@
 # Hexo Theme - Personal
 <!-- Markdown snippet -->
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/03cdea65-1cec-42f0-a03c-ef252c633f38/deploy-status)](https://app.netlify.com/sites/personaltheme/deploys)
-
-[Theme Preview](https://personaltheme.netlify.app)
-
-![Preview](https://personaltheme.netlify.app/assets/Personal.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/702692bd-2803-49a6-b239-b66ece884f1b/deploy-status)](https://app.netlify.com/sites/hexobloggy/deploys)
 
 
+[Theme Preview](https://hexobloggy.netlify.app)
+
+![Preview](https://hexobloggy.netlify.app/assets/bloggy.png)
 
 
-This is Hexo theme named Personal
+
+
+This is Hexo theme named Bloggy
 
 ## Getting started
 
 Install dependencies:
 
 ``` bash
-$ git clone https://github.com/dulgani/personaltheme.git
-$ cd personaltheme
+$ git clone https://github.com/airraya/bloggy.git
+$ cd bloggy
 $ npm install
 ```
 
