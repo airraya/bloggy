@@ -40,6 +40,4 @@ $ hexo server
 - [Iblogger](https://www.iblogger.ca)
 - [AIR RAYA](https://www.airraya.com)
 - [Maple Learning](https://www.maplelearning.org)
-- [Hut Cove](http://www.hutcove.com)
-
 
